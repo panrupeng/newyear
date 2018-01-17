@@ -8,19 +8,35 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "login",
   data() {
     return {
-      msg: "hello"
+      username: "",
+      password: ""
     };
   },
   created() {},
   mounted() {},
   methods: {
-    login (){
+    login() {
       // this.$router.replace({name:'menu'})
-
+      axios({
+        method: "post",
+        url: "http://106.14.198.193/auth",
+        data: {
+          name: this.username,
+          password: this.password
+        }
+      })
+        .then(function(response) {
+          console.log(response.data.status);
+          if (response.data.status === "OK") {
+            this.$router.replace({ name: "menu" });
+          }
+        }.bind(this))
+        .catch(function(error) {});
     }
   }
 };

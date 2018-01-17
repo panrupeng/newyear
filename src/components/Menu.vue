@@ -22,7 +22,7 @@
 </template>
 <script>
 export default {
-  name: "menu"
+  name: "menus"
 };
 </script>
 <style lang="less">

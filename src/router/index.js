@@ -19,7 +19,7 @@ export default new Router({
       component: Login
     },{
       path:'/menu',
-      name: 'menu',
+      name: 'menus',
       component:Menu
     }
   ]
