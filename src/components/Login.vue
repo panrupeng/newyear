@@ -19,7 +19,8 @@ export default {
   mounted() {},
   methods: {
     login (){
-      this.$router.replace({name:'menu'})
+      // this.$router.replace({name:'menu'})
+
     }
   }
 };
