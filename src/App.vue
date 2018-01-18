@@ -1,12 +1,28 @@
 <template>
   <div id="app">
+    <Apphead></Apphead>
     <router-view/>
   </div>
 </template>
 
 <script>
+import Apphead from "./components/Apphead"
 export default {
-  name: 'App'
+  name: 'App',
+  data(){
+    return{
+
+    }
+  },
+  components:{
+    Apphead
+  },
+  created(){
+
+  },
+  methods:{
+
+  }
 }
 </script>
 
@@ -26,7 +42,7 @@ html,body{
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
 }
 </style>

@@ -30,25 +30,29 @@ export default {
           password: this.password
         }
       })
-        .then(function(response) {
-          console.log(response.data.status);
-          if (response.data.status === "OK") {
-            this.$router.replace({ name: "menu" });
-          }
-        }.bind(this))
+        .then(
+          function(response) {
+            console.log(response.data.status);
+            if (response.data.status === "OK") {
+              this.$router.replace({ name: "activity" });
+            }
+          }.bind(this)
+        )
         .catch(function(error) {});
     }
   }
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .loginbox {
   font-size: 18px;
   background-color: #f7f7f7;
   padding: 20px 25px 30px;
   margin: 0 auto 25px;
-  margin-top: 120px;
+  // margin-top: 120px;
+  position: relative;
+  top: 120px;
   border-radius: 2px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   max-width: 350px;

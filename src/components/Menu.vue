@@ -1,6 +1,6 @@
 <template>
   <div class="bgground">
-    <div class="mains"><!--活动-->
+    <div @click="one" class="mains"><!--活动-->
       <div class="menubox">
         <i class="ivu-icon ivu-icon-ios-people"></i>
         <span>活动</span>
@@ -22,10 +22,18 @@
 </template>
 <script>
 export default {
-  name: "menus"
+  name: "menus",
+  data() {},
+  created() {},
+  mounted() {},
+  methods: {
+    one() {
+      this.$router.push({ name: "activity" });
+    }
+  }
 };
 </script>
-<style lang="less">
+<style lang="less" scoped>
 .bgground {
   height: 100%;
   width: 100%;
@@ -60,30 +68,29 @@ export default {
 
 .mains:hover {
   background: #e1f0fa;
-  i{
+  i {
     font-size: 36px;
-     position: relative;
-      top: 5px;
+    position: relative;
+    top: 5px;
     color: #259add;
     opacity: 0.8;
     text-shadow: 0px 0px 13px #fff;
   }
-  span{
+  span {
     font-size: 28px;
     opacity: 1;
-    color:#2676ac;
+    color: #2676ac;
     animation: moveFromTop 200ms ease-in-out;
   }
   @keyframes moveFromTop {
     from {
-        opacity: 0;
-        -moz-transform: translateY(-200%);
+      opacity: 0;
+      -moz-transform: translateY(-200%);
     }
     to {
-        opacity: 1;
-        -moz-transform: translateY(0%);
+      opacity: 1;
+      -moz-transform: translateY(0%);
     }
+  }
 }
-}
-
 </style>
